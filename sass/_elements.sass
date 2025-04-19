@@ -75,55 +75,57 @@ p
     line-height: 1.22
     margin-bottom: 12px
 
+    &.--sm, &.--12
+        font-weight: 500
+        font-size: 12px
+        line-height: 100%
+
     &.--md
-        font-size: 20px
-        line-height: 1.33
-        margin-bottom: 20px
+        font-weight: 600
+        font-size: 14px
+        line-height: 100%
 
     &:last-child
         margin-bottom: 0
 
+    @media screen and ( max-width: 720px )
+        &.--md 
+            font-size: 12px
+        
+    
+
 .btn
+    display: block
     gap: 10px
-    padding: 14px 28px
-    font-weight: 600
-    font-size: 16px
-    line-height: 1.22
-    color: $white
-    background-color: $prime
-    border-radius: 8px
+    width: 100%
+    padding: 10px 28px
+    font-weight: 700
+    font-size: 14px
+    color: $prime
+    text-align: center
+    background-color: $white
+    border-radius: 30px
     cursor: pointer
+    border: 2px solid $prime
 
     &:hover
-        opacity: .8
+        opacity: 1
+        color: $black
 
     &:active
-        transform: scale(.98)
+        border-color: $black
 
-    &.--sm
-        padding: 8px 14px
-        font-size: 14px
-        min-height: 35px
-
-    &.--md
-        padding: 12px 24px
-        min-width: 129px
-        min-height: 46px
-
-    &:disabled
-        background-color: #E7E7F0
-        cursor: not-allowed
-
-input, textarea
+input
     width: 100%
-    padding: 14px
-    font-family: "Montserrat", sans-serif
+    padding: 0 9px
+    font-family: inherit
     font-size: 16px
     line-height: 1.22
+    height: 40px
     color: $black
-    background-color: $white
-    border: 1px solid rgba(47, 47, 47, .15)
-    border-radius: 8px
+    background-color: #E8E9EF
+    border: 1px solid #E8E9EF
+    border-radius: 9px
     transition: all .3s ease
 
     &:focus
@@ -138,6 +140,31 @@ input, textarea
         &:focus
             border-color: $black
 
+input[type="number"]
+    position: relative
+    -moz-appearance: textfield
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        background-color: $white
+        height: 21px
+        width: 11px
+        border-radius: 2px
+        cursor: pointer
+        box-shadow: 0px 0px 1.2px 0px #00000040
+
+    &::-webkit-inner-spin-button
+        opacity: 1
+        background-image: url("data:image/svg+xml,%3Csvg width='30' height='40' viewBox='0 0 30 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 15L15 13L13 15' stroke='%230A2458' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M13 25L15 27L17 25' stroke='%230A2458' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")
+        pointer-events: auto
+        background-position: center center
+        background-repeat: no-repeat
+
+    &:focus
+        &::-webkit-inner-spin-button
+            background-color: $white
+
 img
     display: block
     max-width: 100%
@@ -145,9 +172,7 @@ img
 label
     display: block
     font-family: "Montserrat", sans-serif
-    font-size: 12px
-    line-height: 1
-    margin-bottom: 5px
+    margin-bottom: 11px
     color: $black
 
 .c
@@ -159,7 +184,7 @@ label
         color: $prime
 
 [class^=fx-], [class*=" fx-"], 
-.btn, .fx
+.fx
     display: flex
 
 .fx
@@ -203,7 +228,32 @@ label
     margin: 0 auto
     padding: 0 20px
 
+.inp
+    &-rad
+        position: relative
+        z-index: 1
+        label
+            cursor: pointer
+            display: block
+            margin: 0
+            font-weight: 600
+            font-size: 15.16px
+            line-height: 100%
+            border: 2px solid #E8E9EF
+            background-color: #E8E9EF
+            padding: 11px 9px
+            border-radius: 8px
+
+        input
+            display: none
+            &:checked ~ label
+                border-color: $black
+
 // Media Queries
+@media screen and (max-width: 992px)
+    .container
+        max-width: 720px
+
 @media screen and (max-width: 720px)
     h1
         font-size: 32px
@@ -222,19 +272,4 @@ label
 
     h6
         font-size: 16px
-
-    .btn
-        font-size: 14px
-        padding: 8px 16px
-        min-height: 43px
-
-        &.--md
-            font-size: 12px
-            padding: 8px 16px
-            min-width: 85px
-            min-height: 32px
-
-        &.--sm
-            min-height: 30px
-            font-size: 14px
-            padding: 5px 10px
+        

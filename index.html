@@ -47,16 +47,64 @@
 
     <main class="container">
         <section class="hero fx-ac">
-            <div class="hero-img">
+            <div class="hero__img">
                 <picture>
                     <source srcset="img/main.webp" type="image/webp">
                     <img src="img/main.jpg" alt="i">
                 </picture>
             </div>
-            <div class="hero-content"></div>
+            <div class="hero__content">
+                <h1 class="hero__content-heading">John F.Pepennedy</h1>
+                <p class="hero__content-text --md">THE 35TH PRESIDENT OF THE BLOCKCHAIN</p>
+                <div class="hero__content-ic fx-ac"><img src="img/building.svg" alt="building"></div>
+                <div class="hero__content-docs fx-ac fx-jc">
+                    <a href="#" class="hero__content-doc fx-ac">
+                        <img src="img/file.svg" alt="file">Whitepaper
+                    </a>
+                    <a href="#" class="hero__content-doc fx-ac">
+                        <img src="img/shild.svg" alt="shild">audit
+                    </a>
+                </div>
+
+                <div class="hero__box">
+                    <h5 class="hero__box-heading">PPNDY = $0.00</h5>
+                    <div class="hero__box-sale">
+                        <h4>PRE-SALE IS NOW LIVE!</h4>
+                        <p class="--12">His policy guarantees you prosperity.</p>
+                    </div>
+                    <label>Currency</label>
+                    <div class="fx-ac hero__box-currency">
+                        <div class="inp-rad">
+                            <input type="radio" checked id="ETH" value="ETH" name="currency">
+                            <label for="ETH">ETH</label>
+                        </div>
+                        <div class="inp-rad">
+                            <input type="radio" id="USDT" value="USDT" name="currency">
+                            <label for="USDT">USDT</label>
+                        </div>
+                        <div class="inp-rad">
+                            <input type="radio" id="USDC" value="USDC" name="currency">
+                            <label for="USDC">USDC</label>
+                        </div>
+                    </div>
+
+                    <div class="hero__box-calc fx-ac">
+                        <div class="inp-wrap">
+                            <label for="pay">Pay</label>
+                            <input type="number" min="0" id="pay" placeholder="0">
+                        </div>
+                        <div class="inp-wrap">
+                            <label for="receive">Receive</label>
+                            <input type="number" min="0" id="receive" placeholder="0">
+                        </div>
+                    </div>
+                    <p class="hero__box-altheading">OR</p>
+                    <a href="#" class="btn">Show Address</a>
+                </div>
+            </div>
         </section>
     </main>
-
+        
 </body>
 
 </html>

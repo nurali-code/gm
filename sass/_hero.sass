@@ -1,0 +1,125 @@
+.hero
+    gap: 5%
+    padding-bottom: 55px
+    &__img
+        aspect-ratio: 1
+        width: 54%
+        img
+            border-radius: 20px
+            overflow: hidden
+            width: 100%
+            height: auto
+            object-fit: cover
+
+    &__content
+        width: 41%
+        margin: 0 auto
+        text-align: center
+
+        &-heading
+            margin: 0 0 16px
+
+        &-text
+            margin: 0 0 30px
+
+        &-ic
+            gap: 7px
+            position: relative
+            bottom: -11px
+            max-width: 387px
+            margin: 0 auto
+            img
+                width: 41px
+                min-width: 41px
+                margin-bottom: 3px
+            &::before,
+            &::after
+                content: ''
+                flex: 1
+                display: block
+                width: 100%
+                margin: 7px 0 0
+                height: 1px
+                background-color: #CDD1DB
+
+        &-docs
+            padding: 18px 0
+
+            gap: 47px
+            @media screen and ( min-width:992px  )
+                display: none
+
+        &-doc
+            gap: 6px
+            color: $prime
+            font-weight: 600
+            font-size: 12px
+            text-transform: uppercase
+
+    &__box
+        background-color: #F3F4F6
+        padding: 28px 29px 23px
+        max-width: 387px
+        margin: 0 auto
+        border-radius: 0 0 20px 20px
+
+        &-sale
+            padding: 20px 11px
+            border-radius: 20px
+            background-color: #EEE4C1
+            border: 2px solid #0A2458
+            margin: 0 0 23px
+            &>*
+                margin: 0
+
+        label
+            font-weight: 500
+            font-size: 14px
+            line-height: 100%
+            text-align: left
+
+        &-currency
+            gap: 16px
+            margin: 0 0 12px
+            &>*
+                flex: 1
+
+        &-calc
+            gap: 8px
+            margin-bottom: 22px
+            &>*
+                flex: 1
+
+        &-altheading
+            font-weight: 700
+            font-size: 14px
+            line-height: 100%
+            margin: 0 0 6px
+
+    @media screen and ( max-width: 992px )
+        padding-bottom: 28px
+        display: block
+        &__img
+            width: 100%
+            max-width: 500px
+            margin: 0 auto 27px
+
+        &__content
+            width: 100%
+
+            &-ic
+                position: static
+
+        &__box 
+            &-sale 
+                border-radius: 12px
+                padding: 16px 8px
+
+            &-currency
+                gap: 12px
+
+            &-calc 
+                gap: 10px
+                flex-direction: column
+                &>* 
+                    width: 100%
