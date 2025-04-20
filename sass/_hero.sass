@@ -1,9 +1,9 @@
 .hero
-    gap: 5%
-    padding-bottom: 55px
+    gap: 4%
+    padding: 0 0 55px
     &__img
         aspect-ratio: 1
-        width: 54%
+        width: 52%
         img
             border-radius: 20px
             overflow: hidden
@@ -12,15 +12,15 @@
             object-fit: cover
 
     &__content
-        width: 41%
+        width: 42%
         margin: 0 auto
         text-align: center
 
         &-heading
-            margin: 0 0 16px
+            margin: 0 0 14px
 
         &-text
-            margin: 0 0 30px
+            margin: 0 0 13px
 
         &-ic
             gap: 7px
@@ -102,24 +102,329 @@
         &__img
             width: 100%
             max-width: 500px
-            margin: 0 auto 27px
+            margin: 0 auto 25px
 
         &__content
             width: 100%
+            &-heading
+                margin-bottom: 12px
+
+            &-text
+                margin-bottom: 18px
 
             &-ic
                 position: static
 
-        &__box 
-            &-sale 
+        &__box
+            padding: 24px 23px
+            &-heading
+                margin-bottom: 15px
+            &-sale
                 border-radius: 12px
                 padding: 16px 8px
+                margin-bottom: 14px
+                h4
+                    font-size: 20px
 
             &-currency
                 gap: 12px
+                margin-bottom: 12px
 
-            &-calc 
+            &-calc
                 gap: 10px
+                margin-bottom: 11px
                 flex-direction: column
-                &>* 
+                &>*
                     width: 100%
+
+            &-altheading
+                font-size: 12px
+
+.wrap
+    &__content
+        width: 72%
+        padding-right: 77px
+        border-right: 1px solid #CDD1DB
+        @media screen and ( max-width: 992px )
+            width: 72%
+            padding-right: 44px
+
+    @media screen and ( max-width: 720px )
+        display: block
+        &__content
+            width: 100%
+            border: none
+            padding: 0 0 17.5px
+
+.bio
+    padding-top: 0
+
+    &::after
+        content: ''
+        display: block
+        width: 235px
+        height: 2px
+        background-color: $black
+        margin: 47px auto 0
+
+    &__handwrite
+        max-width: 615px
+        width: 100%
+        margin: 0 0 21px
+
+    &__heading
+        font-weight: 500
+        margin: 0 0 32px
+
+    @media screen and ( min-width: 720px )
+        padding: 0
+
+    @media screen and ( max-width: 992px )
+        &__heading
+
+    @media screen and ( max-width: 720px )
+        &::after
+            margin-top: 38px
+
+        &__heading
+            font-size: 12px
+
+.aside
+    width: 24%
+    &__heading
+        font-weight: 700
+        font-size: 14px
+        line-height: 100%
+
+    &__list
+        font-weight: 500
+        font-size: 14px
+        color: $prime
+        line-height: 122%
+        margin: 0 0 22px
+
+    &__subheading
+        font-family: 'Montserrat', sans-serif
+        font-weight: 500
+        font-size: 14px
+        line-height: 100%
+        margin: 0 0 13px
+
+    &__picture
+        display: block
+        margin: auto
+
+    @media screen and ( max-width: 992px )
+        &__list
+            font-size: 12px
+            margin-bottom: 15px
+
+    @media screen and ( max-width: 720px )
+        width: 100%
+        &__heading
+            margin-bottom: 12px
+
+        &__list
+            margin-bottom: 15px
+
+        &__picture
+            display: none
+
+.tokenomics
+    h2
+        margin-bottom: 4px
+
+    &__text
+        font-weight: 400
+        font-size: 16px
+        margin-bottom: 40px
+
+    &__list
+        list-style-type: none
+        padding: 0
+        max-width: 560px
+        padding: 35px 26px
+        border-radius: 20px
+        border: 2px solid $black
+        li
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-bottom: 16px
+            position: relative
+            z-index: 1
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 1px
+                border-bottom: 1px dashed $black
+                position: absolute
+                left: 0
+                z-index: -11
+                bottom: 4px
+
+            &:last-child
+                margin-bottom: 0
+
+            span
+                background-color: $white
+                display: block
+                padding: 0 8px
+                font-weight: 700
+                line-height: 112%
+
+        .head
+            font-size: 16px
+
+        .descr
+            font-size: 14px
+            width: 100%
+            font-weight: 400
+            display: block
+            margin-top: 7px
+
+        .val
+            text-align: right
+            font-size: 20px
+
+        &-heading
+            &::before
+                top: 12px
+                bottom: auto
+            .head
+                font-size: 20px
+
+    @media screen and ( max-width: 992px )
+        &__list
+            &-heading
+                display: block !important
+                &::before
+                    display: none !important
+
+                .val
+                    text-align: left
+
+        &__text
+            font-size: 14px
+            margin-bottom: 25px
+
+    @media screen and ( max-width: 720px )
+        padding-bottom: 35px
+        &__list
+            padding: 23px 20px
+            li
+                align-items: flex-end
+                margin-bottom: 9px
+            .head, .descr
+                font-size: 12px
+
+            &-heading
+                margin-bottom: 12px !important
+                .head
+                    font-size: 16px
+                    margin-bottom: 2px
+
+        &__text
+            font-size: 12px
+            margin-bottom: 10px
+
+.htb
+    &__wrap
+        gap: 26px 30px
+        &>*
+            width: calc( 50% - 15px )
+
+    &__item
+        background-color: #F3F4F6
+        border-left: 2px solid $black
+        padding: 19px 20px
+        &-heading
+            font-family: 'Montserrat', sans-serif
+            font-weight: 700
+            font-size: 16px
+            margin: 0 0 10px
+
+        &-text
+            font-weight: 400
+            font-size: 14px
+            margin: 0
+
+    &-sign
+        margin-left: auto
+        max-width: 219px
+
+    @media screen and ( max-width: 992px )
+        &__wrap
+            gap: 26px 30px
+            &>*
+                width: 100%
+
+    @media screen and ( max-width: 720px )
+        &__wrap
+            gap: 8px
+
+        &__item
+            &-heading
+                font-size: 14px
+            &-text
+                font-size: 12px
+
+        &-sign
+            padding-top: 5px
+            max-width: 143px
+
+.faq
+    &__item
+        padding: 15px 14px
+        background-color: #F3F4F6
+        border: 1px solid #E0E5EF
+        &:not(&:last-of-type)
+            border-bottom: none
+
+    &__text
+        font-weight: 500
+        font-size: 14px
+        overflow: hidden
+        transition: all ease .3s
+        padding: 0
+        max-height: 0
+
+    &__heading
+        padding: 5px 14px 5px 30px
+        font-weight: 700
+        font-size: 14px
+        position: relative
+        width: 100%
+        text-align: left
+        &::before
+            content: "+"
+            text-align: center
+            width: 20px
+            line-height: 20px
+            display: block
+            position: absolute
+            left: 0
+            top: 50%
+            transition: transform .3s ease
+            font-weight: 500
+            font-size: 24px
+            color: $black
+            margin-top: -10px
+
+        &:hover
+            color: $prime
+        &.active
+            color: $prime
+            &::before
+                color: $prime
+                transform: rotate(45deg)
+
+            &~*
+                padding: 0 0 5px
+                max-height: 500px
+
+    @media screen and ( max-width: 720px )
+        &__item
+            padding: 12px 14px

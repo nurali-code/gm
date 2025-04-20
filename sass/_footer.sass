@@ -1,84 +1,10 @@
 .footer
-    margin-top: auto
-    background-color: $prime
-    color: $white
-    padding: 10px 0 21px
-    a
-        color: $white
-        &:hover
-            text-decoration: underline
-
-    &-nav
-        align-self: center
-        &__link
-            display: block
-            font-size: 18px
-            line-height: 100%
-            padding: 10px 25px
-
-    .contacts
-        &__link
-            width: fit-content
-            font-size: 18px
-            line-height: 100%
-            gap: 10px
-            margin-bottom: 12px
-            &:last-child
-                margin-bottom: 0
-
-        .ic
-            width: 38px
-            height: 38px
-
-    &-links
-        margin-top: 10px
-        &__link
-            display: block
-            width: fit-content
-            font-weight: 500
+    .container
+        gap: 6px 20px
+        &>*
+            font-weight: 700
             font-size: 14px
-            line-height: 100%
-            text-decoration: underline
-            opacity: .6
-            margin-bottom: 12px
-            &:hover
-                text-decoration: none
-            &:last-child
-                margin-bottom: 0
+            line-height: 120%
 
-    @media screen and ( max-width: 992px )
-        .container
-            gap: 20px 10px
-
-        .contacts,
-        &-links
-            width: 90%
-            margin: 0
-
-        &-col
-            max-width: 112px
-
-        .contacts
-            &__link
+            @media screen and ( max-width: 720px )
                 font-size: 12px
-                margin-bottom: 10px
-            .ic
-                width: 28px
-                height: 28px
-
-    @media screen and ( max-width: 720px )
-        .container
-
-        .logo
-            span
-                opacity: .6
-
-        &-nav
-            gap: 10px
-            &__link
-                padding: 5px
-                font-size: 12px
-
-        &-links
-            &__link
-                font-size: 10px
