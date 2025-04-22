@@ -184,6 +184,14 @@
         width: 100%
         margin: 0 0 21px
 
+    &__subheading
+        max-width: 618px
+        font-weight: 300
+        font-size: 17px
+        line-height: 1.35em
+        font-style: italic
+        margin: 0 0 13px
+
     &__heading
         font-weight: 500
         margin: 0 0 32px
@@ -191,12 +199,13 @@
     @media screen and ( min-width: 720px )
         padding: 0
 
-    @media screen and ( max-width: 992px )
-        &__heading
-
     @media screen and ( max-width: 720px )
         &::after
             margin-top: 38px
+
+        &__subheading
+            font-size: 12px
+            margin-bottom: 8px
 
         &__heading
             font-size: 12px
@@ -233,7 +242,6 @@
 
         &.--first
             margin: 20px auto 0
-            
 
     @media screen and ( max-width: 992px )
         &__list
