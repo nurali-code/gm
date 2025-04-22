@@ -224,12 +224,16 @@
 
     &__picture
         display: block
-        margin: auto
         transition: all ease .1s
         &:last-child
             overflow: hidden
             border-radius: 50%
+            margin: auto auto 0
             margin-bottom: 0
+
+        &.--first
+            margin: 20px auto 0
+            
 
     @media screen and ( max-width: 992px )
         &__list
